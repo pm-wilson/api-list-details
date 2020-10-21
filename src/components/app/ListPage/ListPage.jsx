@@ -1,5 +1,6 @@
 import React from 'react';
 import { getCharacters } from '../services/characters-api';
+import Character from '../DetailPage/Character';
 
 class ListPage extends React.Component {
   state = {
@@ -11,16 +12,12 @@ class ListPage extends React.Component {
     this.setState({ data: characters });
   }
 
- render() {
+  render() {
     return (
       <div>
         <h1>Futurama Quote Finder</h1>
         <h3>Characters:</h3>
-        <div>
-          {this.state.data.map((character, i) => {
-            return <div key={character.Name}>{character.Name}</div>;
-          })}
-        </div>
+        <Character characters={this.state.data}/>
       </div>
     );
   }
