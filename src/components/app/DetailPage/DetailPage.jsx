@@ -9,7 +9,7 @@ class DetailDisplay extends React.Component {
   }
 
   async componentDidMount() {
-    const id = window.location.search.slice(1);
+    const id = this.props.match.params.id;
     const displayData = await getDetails(id);
     this.setState({ detailData: displayData });
   }

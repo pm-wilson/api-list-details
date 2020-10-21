@@ -19,9 +19,9 @@ export default class App extends Component {
               render={(routerProps) => <ListPage {...routerProps} />}
             />
             <Route
-              path="/quote"
+              path="/quote/:id"
               exact
-              render={(routerProps) => <DetailPage {...routerProps} />}
+              component={DetailPage}
             />
           </Switch>
         </Router>

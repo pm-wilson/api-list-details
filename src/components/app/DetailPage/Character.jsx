@@ -9,7 +9,7 @@ class Character extends Component {
     return (
       <div>
         {characters.map((character) => {
-          return <Link className="character-name" to={`/quote?${character.id}`} key={character.id}>{character.name}</Link>;
+          return <Link className="character-name" to={`/quote/${character.id}`} key={character.id}>{character.name}</Link>;
         })}
       </div>
     );
