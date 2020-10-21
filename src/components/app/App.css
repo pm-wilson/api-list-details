@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: burlywood;
+}
+
+a {
+  display: block;
+  cursor: pointer;
+}
+
+p {
+  font-size: large;
+}
+
+img {
+  border: solid 15px black;
+  border-radius: 10px;
+}
