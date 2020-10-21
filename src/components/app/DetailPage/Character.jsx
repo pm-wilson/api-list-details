@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Character extends Component {
   render() {
@@ -8,7 +9,7 @@ class Character extends Component {
     return (
       <div>
         {characters.map((character) => {
-          return <div key={character.Name}>{character.Name}</div>;
+          return <Link className="character-name" to={`/quote?${character.id}`} key={character.id}>{character.name}</Link>;
         })}
       </div>
     );

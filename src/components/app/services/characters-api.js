@@ -1,8 +1,8 @@
 export const getCharacters = async() => {
-  const res = await fetch('http://futuramaapi.herokuapp.com/api/v2/characters');
+  const res = await fetch('https://rickandmortyapi.com/api/character/');
   const json = await res.json();
-  const characters = await json.map(character => {
-    return character
-  })
-  return characters;
-}
+  const characterNames = await json.results.map(character => {
+    return character;
+  });
+  return characterNames;
+};

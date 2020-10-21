@@ -15,7 +15,7 @@ class ListPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Futurama Quote Finder</h1>
+        <h1>Rick and Morty Quote Finder</h1>
         <h3>Characters:</h3>
         <Character characters={this.state.data}/>
       </div>
